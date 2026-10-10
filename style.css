@@ -1,0 +1,111 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: #080b10;
+}
+
+body {
+    color: #f4f8ff;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Fixed 3D scene behind the page */
+#scene-container {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+#scene-container canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Introductory heading */
+.intro {
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    pointer-events: none;
+}
+
+.intro p,
+.caption span {
+    color: #6bdcff;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.intro h1 {
+    font-size: clamp(30px, 5vw, 65px);
+    margin: 15px 0;
+}
+
+.intro span {
+    color: #aab5c5;
+}
+
+/* Each section provides scrolling distance */
+.scroll-section {
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Section labels */
+.caption {
+    position: absolute;
+    left: 8%;
+    bottom: 12%;
+    max-width: 360px;
+    text-shadow: 0 2px 15px #000;
+}
+
+.caption h2 {
+    margin-top: 12px;
+    font-size: clamp(25px, 4vw, 42px);
+}
+
+.caption p {
+    color: #aab5c5;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* Scroll hint */
+.scroll-indicator {
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    z-index: 3;
+    color: #6bdcff;
+    font-size: 12px;
+    letter-spacing: 3px;
+    pointer-events: none;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    .caption {
+        left: 6%;
+        bottom: 10%;
+        max-width: 280px;
+    }
+
+    .intro {
+        top: 7vh;
+    }
+}

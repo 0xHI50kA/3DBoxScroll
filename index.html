@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Scroll Box</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    Allow the browser to load Three.js as a module
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- The 3D animation stays visible while scrolling -->
+    <div id="scene-container"></div>
+
+    <!-- Introductory text -->
+    <header class="intro">
+        <p>SCROLL TO EXPLORE</p>
+        <h1>THE MYSTERY BOX</h1>
+        <span>Something is waiting inside.</span>
+    </header>
+
+    <!-- These sections create the scroll distance -->
+    <main>
+        <section class="scroll-section" data-step="0">
+            <div class="caption">
+                <span>01 / BEGIN</span>
+                <h2>A closed box</h2>
+            </div>
+        </section>
+
+        <section class="scroll-section" data-step="1">
+            <div class="caption">
+                <span>02 / OPEN</span>
+                <h2>Discover what's inside</h2>
+            </div>
+        </section>
+
+        <section class="scroll-section" data-step="2">
+            <div class="caption">
+                <span>03 / REVEAL</span>
+                <h2>A new creation emerges</h2>
+            </div>
+        </section>
+
+        <section class="scroll-section" data-step="3">
+            <div class="caption">
+                <span>04 / RETURN</span>
+                <h2>Back where it belongs</h2>
+            </div>
+        </section>
+
+        <section class="scroll-section" data-step="4">
+            <div class="caption">
+                <span>05 / END</span>
+                <h2>The mystery remains</h2>
+                <p>Scroll back up to open it again.</p>
+            </div>
+        </section>
+    </main>
+
+    <div class="scroll-indicator">SCROLL ↓</div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
